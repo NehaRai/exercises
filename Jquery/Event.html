@@ -1,0 +1,58 @@
+
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>Events with jQuery</title>
+       <script type="text/javascript" src="Scripts/jquery-1.7.1.js"></script>
+      <!-- Add JQuery here -->
+      <script type="text/javascript">
+          $(function () {
+            //Bind
+              $("#evtTarget").bind("mouseenter mouseleave", function highlight(evt) {
+                  $("#evtTarget").toggleClass("highlighted");
+              });
+              //Unbind
+              $('#evtTarget').bind('click', function () {
+                  $('#evtTarget').unbind("mouseenter mouseleave");
+
+              });
+              //Trigger on button click
+              $("#input1").select(function () {
+                  $("#input1").after("Hello!");
+              });
+              $("#button1").click(function () {
+                  $("#input1").trigger("select");
+              });
+              //Delegate
+              $("body").delegate("#button2", "click", function () {
+                  alert('I am ' + $(this).text());
+              });
+
+               // Bind highlight function on mouseover & mouseleave event on evtTarget element
+              // unbind highlight function on click event on evtTarget element
+          });
+     </script>
+      <style type='text/css'>
+          .normal {
+              width: 300px;
+              height: 200px;
+              background-color: Yellow;
+              font-size: 18pt;
+          }
+          .normal1 
+          {
+               background-color: Yellow;
+          }
+          .highlighted {
+              background-color: Red;
+          }
+      </style>
+  </head>
+  <body>
+      <h1>Binding Event Example</h1>
+      <div id="evtTarget" class="normal">Mouse over this div to see the effect. Click on it to unbind the mouseover.</div>
+      <input id="input1" type="text" value="Hello" />
+      <br />
+      <button id="button1">Trigger TextBox</button>
+      <button id="button2">Delegate</button>
+  </body>
+  </html>

@@ -1,0 +1,153 @@
+Sample Form Html -
+  
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>Using Form Selectors and Filters</title>
+      <script type="text/javascript" src="Scripts/jquery-1.7.1.js"></script>
+      <!-- Add JQuery here -->
+      <script type="text/javascript">
+          $("document").ready(function () {
+              $('#button1').toggle(function () {
+                  $("form :input").css("border", "3px solid red");
+              }, function () {
+                  $("form :input").css("border", "");
+              });
+              //Select All form button
+              $('#button2').toggle(function () {
+                  $(":button").css("border", "3px solid green");
+              }, function () {
+                  $(":button").css("border", "1px solid black");
+              });
+              //Select All input text
+              $('#button3').toggle(function () {
+                  $("form input:text").css("border", "3px solid orange");
+              }, function () {
+                  $("form input:text").css("border", "");
+              });
+              //Select All checked radio
+              $('#button4').toggle(function () {
+                  $("form input:radio:checked").css("border", "3px solid blue");
+              }, function () {
+                  $("form input:radio:checked").css("border", "");
+              });
+              //Select All checked checkboxes
+              $('#button5').toggle(function () {
+                  $("form input:checkbox:checked").css("border", "3px solid yellow");
+              }, function () {
+                  $("form input:checkbox:checked").css("border", "");
+              });
+              //Select second td 
+              $('#button6').toggle(function () {
+                  $("table tr td:eq(1)").css("border", "3px solid red");
+              }, function () {
+                  $("table tr td:eq(1)").css("border", "");
+              });
+              //Select
+              $("table tr td:#FirstName").select(function () {
+                  $("table tr td:#FirstName").after("Hello!");
+              });
+              //blur
+              $('#button7').toggle(function () {
+                  $('#button7').blur();
+              });
+          });
+      </script>
+      <style type="text/css">
+          .style1 {
+              width: 600px;
+          }
+
+          .style2 {
+              width: 200px;
+          }
+      </style>
+  </head>
+  <body>
+
+  <h1>
+      Example Form Document</h1>
+
+  <form action="" method="post">
+
+      <table class="style1">
+          <tbody>
+          <tr>
+              <td class="style2">
+                  First Name
+              </td>
+              <td>
+                  <input id="FirstName" type="text"/></td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  Last Name
+              </td>
+              <td>
+                  <input id="LastName" type="text"/></td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  Disabled Element
+              </td>
+              <td>
+                  <input id="Text1" type="text" disabled="disabled"/></td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  Gender
+              </td>
+              <td>
+                  <input id="Male" type="radio" checked="checked"/>M<input id="Female" type="radio"/>F
+              </td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  What products are you interested in?
+              </td>
+              <td>
+                  <input id="Checkbox1" type="checkbox" checked="checked"/><label for="Checkbox1">Widgets</label><br/>
+                  <input id="Checkbox2" type="checkbox"/><label for="Checkbox1">Hibbity Jibbities</label><br/>
+                  <input id="Checkbox3" type="checkbox" checked="checked"/><label
+                      for="Checkbox1">SplashBangers</label><br/>
+                  <input id="Checkbox4" type="checkbox"/><label for="Checkbox1">Whatzits</label></td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  Comments:
+              </td>
+              <td>
+                  <textarea id="Comments" cols="40" name="S1" rows="5"></textarea></td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  Optional life story file
+              </td>
+              <td>
+                  <input id="File1" type="file"/></td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  &nbsp;</td>
+              <td>
+                  &nbsp;</td>
+          </tr>
+          <tr>
+              <td class="style2">
+                  &nbsp;</td>
+              <td>
+                  <input id="Submit1" type="submit" value="submit"/>
+                  <input id="Reset1" type="reset" value="reset"/></td>
+          </tr>
+          </tbody>
+      </table>
+
+  </form>
+  <input type="button" id="button1" value="Select All Form input"/>
+   <input type="button" id="button2" value="Select All Form button"/>
+   <input type="button" id="button3" value="Select All input text"/>
+   <input type="button" id="button4" value="Select checked radio"/></br>
+    <input type="button" id="button5" value="Select checked checkbox"/>
+     <input type="button" id="button6" value="Select second Td"/>
+     <input type="button" id="button7" value="Onload blur button"/>
+  </body>
+  </html>

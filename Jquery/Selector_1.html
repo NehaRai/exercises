@@ -1,0 +1,135 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+  
+  <title>Document</title>
+  <script src="Scripts/jquery-1.7.1.js"></script>
+  <!-- Add JQuery here -->
+  <script type="text/javascript">
+      $("document").ready(function () {
+          // Example
+          // Use basic selectors, basic filters, attribute selectors, content filters, hierarchy filters
+          //select all ps
+          $('#button1').toggle(function () {
+              $("p").css("border", "3px solid red");
+          }, function () {
+              $("p").css("border", "");
+          });
+          //select all lists
+          $('#button2').toggle(function () {
+              $("ul").css("border", "3px solid red");
+          }, function () {
+              $("ul").css("border", "");
+          });
+          //selector by class
+          $('#button3').toggle(function () {
+              $(".a").css("color", "pink");
+          }, function () {
+              $(".b").css("color", "green");
+          });
+          //select by Id
+          $('#button4').toggle(function () {
+              $("#p2").css("color", "aqua");
+          }, function () {
+              $("#p2").css("color", "");
+          });
+          //select by attribute
+          $('#button5').toggle(function () {
+              $('input[name=att]').css("color", "aqua");
+          }, function () {
+              $("input[name=att]").css("color", "");
+          });
+          //select first item from a list
+          $('#button6').toggle(function () {
+              $('ul li:first').css("color", "orange");
+          }, function () {
+              $("ul li:first").css("color", "");
+          });
+          //select last item from a list
+          $('#button7').toggle(function () {
+              $('ul li:last').css("color", "orange");
+          }, function () {
+              $("ul li:last").css("color", "");
+          });
+          //select even item from a list
+          $('#button8').toggle(function () {
+              $('ul li:even').css("border", "3px solid pink");
+          }, function () {
+              $("ul li:even").css("border", "");
+          });
+          //select odd item from a list
+          $('#button9').toggle(function () {
+              $('ul li:odd').css("border", "3px solid green");
+          }, function () {
+              $("ul li:odd").css("border", "");
+          });
+          //Returns all elements that contain no child nodes
+          $('#button10').toggle(function () {
+              $(':empty').css("color", "orange");
+          }, function () {
+              $(':empty').css("color", "");
+          });
+          //select elements contain 'This'
+          $('#button11').toggle(function () {
+              $(":contains('This')").css("color", "orange");
+          }, function () {
+              $(":contains('This')").css("color", "");
+          });
+          //Return all input hidden elements
+          $('#button12').toggle(function () {
+              var i = $('input:hidden').length;
+              alert("Total "+i+" hidden feilds found");
+          }, function () {
+              $('input[type=hidden]').css("color", "");
+          });
+          //          //Items that are children of a 'c' class 
+          //          $('#button13').toggle(function () {
+          //              $('ul li.c >ul').css("border", "3px solid red");
+          //           }, function () {
+          //              $('ul li.c >ul').css("border", "");
+          //          });
+          //Items that are children of a 'c' class 
+          $('#button13').toggle(function () {
+              $('ul.c > li').css("border", "3px solid red");
+          }, function () {
+              $('ul.c > li').css("border", "");
+          });
+      });
+  </script>
+  <style type="text/css">
+  .a { color: Navy; }
+  .b { color: Maroon; }
+  </style>
+  </head>
+  <body>
+      <ul class="c" id="list1" >
+          <li id="item1" class="a">item 1</li>
+          <li class="a">item 2</li>
+          <li class="b">item 3</li>
+          <li class="b">item 4</li>
+          
+      </ul>
+      
+      <p class="a">This is paragraph 1</p>
+      <p id="p2">This is paragraph 2</p>
+      <p class="b">This is paragraph 3</p>
+      <p>This is paragraph 4</p>
+      <input type="hidden"/></br>
+      <input type="hidden"/></br>
+      <input name="att" type="text" value="Select by Attribute" /></br></br>
+      <!-- Add multiple buttons for each selector -->
+      <input type="button" name='first_name' id="button1" value="Select All Ps" />
+      <input type="button" id="button2" value="Select All Lists" />
+       <input type="button" id="button3" value="Select elements by class" />
+        <input type="button" id="button4" value="Select elements by Id" />
+        <input type="button" id="button5" value="Select elements by attribute" /></br>
+        <input type="button" id="button6" value="Select first item in the list" />
+        <input type="button" id="button7" value="Select last item in the list" />
+        <input type="button" id="button8" value="Select even item in the list" />
+        <input type="button" id="button9" value="Select odd item in the list" /></br>
+        <input type="button" id="button10" value="Returns all elements that contain no child nodes" />
+        <input type="button" id="button11" value="Returns all elements that contain This" />
+         <input type="button" id="button12" value="Returns all the hidden elements" /></br>
+         <input type="button" id="button13" value="Items that are children of a particular class"/>
+  </body>
+  </html>
+
