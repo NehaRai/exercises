@@ -1,0 +1,160 @@
+﻿
+#wrapper
+{
+    background: url(../images/pink-background.jpg) no-repeat;
+    width:100%;
+    height:960px;
+}
+#Parent {
+	width:882px;
+	position:relative;
+	margin:10px auto;
+}
+.Banner{
+	float:left;
+	width:100%;
+}
+.headertop 
+{ 
+    height:17px; 
+}
+.leftlogo {
+	width:14%;
+	height:103px;
+	float:left; 
+}
+.righthead {
+	width: 86%;
+	height:103px;
+	float:left; 
+	background: url(../images/DollHeader2.png) no-repeat;
+}
+.body{
+	float:left;
+	width:100%;
+	height:100%;
+	background: url(../images/Pinkbody.jpg) ;
+}
+
+#leftmenu
+{
+    width:25%;
+	float:left;
+}
+
+#leftmenu_top
+{
+width:204px;
+height:13px;
+background-image:url(../images/leftmenu_top.png);
+float:left;
+}
+#leftmenu_bottom
+{
+width:204px;
+height:13px;
+background-image:url(../images/leftmenu_bottom.png);
+float:left;
+}
+#leftmenu_main
+{
+width:204px;
+height:auto;
+background-color:#420000;
+float:left;
+}
+
+#leftmenu_main ul
+{
+list-style: none;
+padding: 0px;
+width:204px;
+}
+
+
+#leftmenu_main h2
+{
+list-style: none;
+padding: 0px;
+width:204px;
+color:#FFFFFF;
+padding-left:10px;
+padding-bottom:14px;
+}
+
+#leftmenu_main ul li
+{
+list-style: none;
+padding: 0px;
+width:204px;
+text-align:left;
+}
+
+#leftmenu_main ul li a, #leftmenu_main ul li a:visited
+{
+	display:block;
+list-style: none;
+padding: 0px;
+width:192px;
+padding-left:12px;
+padding-top:4px;
+height:30px;
+text-align:left;
+background-image:url(../images/leftmenu_link.png);
+background-repeat:repeat-x;
+margin-top:5px;
+color:#FFFFFF;
+text-decoration:none;
+font-size:15px;
+font-weight:bold;
+}
+
+#leftmenu_main ul li a:hover
+{
+color:#EED7D7;
+}
+
+#content
+{
+   width: 70%;
+   height:203px;
+   float:left; 
+   display:block;
+}
+#content_top
+{
+	background-image:url(../images/main_top.png);
+	background-repeat:no-repeat;
+	width:600px;
+	height:23px;
+	margin:0;
+}
+#content_main
+{
+background-image:url(../images/main_back.png);
+background-repeat:repeat-y;
+width:570px;
+padding-left:15px;
+padding-right:15px;
+margin:0;
+}
+#content_bottom
+{
+background-image:url(../images/main_bottom.png);
+background-repeat:no-repeat;
+width:600px;
+height:23px;
+margin:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+

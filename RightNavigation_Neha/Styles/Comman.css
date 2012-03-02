@@ -1,0 +1,177 @@
+﻿
+#wrapper
+{
+    background: url(../images/pink-background.jpg) no-repeat;
+    width:100%;
+    height:960px;
+}
+#Parent {
+	width:70%;
+	position:relative;
+	margin:10px auto;
+}
+.Banner{
+	float:left;
+	width:100%;
+}
+.headertop 
+{ 
+    height:17px; 
+}
+.leftlogo {
+	width:14%;
+	height:103px;
+	float:left; 
+}
+.righthead {
+	width: 86%;
+	height:103px;
+	float:left; 
+	background: url(../images/DollHeader2.png) no-repeat;
+}
+.body{
+	float:left;
+	width:100%;
+	height:100%;
+	background: url(../images/MainContantPink.jpg) ;
+}
+
+#Rightmenu
+{
+    width:25%;
+	float:right;
+}
+
+#Rightmenu_top
+{
+width:93.5%;
+height:13px;
+border-left:2px solid;
+border-top:2px solid;
+border-right:2px solid;
+background-color:#FCDFFF;
+
+float:right;
+}
+#Rightmenu_bottom
+{
+width:93.5%;
+height:13px;
+border-left:2px solid;
+border-bottom:2px solid;
+border-right:2px solid;
+background-color:#FCDFFF;
+
+float:right;
+}
+#Rightmenu_main
+{
+width:93.5%;
+height:auto;
+background-color:#FCDFFF;
+float:right;
+border-left:2px solid;
+
+border-right:2px solid;
+}
+
+#Rightmenu_main ul
+{
+list-style: none;
+padding: 0px;
+width:30%;
+}
+
+
+#Rightmenu_main h2
+{
+list-style: none;
+padding: 0px;
+width:30%;
+color:Black;
+padding-left:10px;
+padding-bottom:14px;
+}
+
+#Rightmenu_main ul li
+{
+list-style: none;
+padding: 0px;
+width:30%;
+text-align:left;
+}
+
+#Rightmenu_main ul li a, #Rightmenu_main ul li a:visited
+{
+	display:block;
+list-style: none;
+padding: 0px;
+width:500%;
+padding-left:12px;
+padding-top:4px;
+height:30px;
+text-align:left;
+background-color:#FCDFFF;
+background-repeat:repeat-x;
+margin-top:5px;
+color:Black;
+text-decoration:none;
+font-size:15px;
+font-weight:bold;
+}
+
+#Rightmenu_main ul li a:hover
+{
+color:#F6358A;
+}
+
+#content
+{
+   width: 70%;
+   height:203px;
+   float:left; 
+   display:block;
+   margin-left:30px;
+   margin-top:40px;
+    
+   
+}
+#content_top
+{
+	background-image:url(../images/main_top.png);
+	background-repeat:no-repeat;
+	width:98.2%;
+	height:23px;
+	margin:0;
+}
+#content_main
+{
+background-repeat:repeat-y;
+background-color:#FCDFFF;
+width:96%;
+padding-left:15px;
+padding-right:15px;
+margin:0;
+border:2px solid;  
+
+}
+#content_bottom
+{
+background-image:url(../images/main_bottom.png);
+background-repeat:no-repeat;
+width:98.2%;
+height:23px;
+margin:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
