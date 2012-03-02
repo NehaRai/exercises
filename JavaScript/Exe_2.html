@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript">
+function factorial(n)
+{
+l=1;
+for(i=1;i<=n;i++)
+l=l*i;
+return l;
+    }
+</script>
+</head>
+<body>
+<form>
+    <div>
+        <h1><b> Findout the factorial of a number</b></h1></br>
+        <div style="border: 1px solid gray;   
+        top: 150px; left: 150px">
+            Enter number:<input type="text" name="t"></br>
+            <input type="button" align="middle" value="submit" onClick="document.getElementById('Result').value=
+            factorial(t.value)"></br>
+             Result:<input id="Result" type="text" >   
+        </form>
+        </div>
+    </div>
+</body>
+</html>

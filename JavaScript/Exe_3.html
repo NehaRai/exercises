@@ -1,0 +1,38 @@
+<html>
+<head>
+<script type="text/javascript">
+    function GreaterThen(firstValue) {
+        return function test(secondValue) {
+            if (firstValue > secondValue)
+    {
+       return true;
+    }
+    else
+    {
+      return false;
+    }
+    }  
+}
+function FindGeaterNo(firstValue, secondValue)
+{
+    x = GreaterThen(firstValue);
+    return x(secondValue);
+    
+}    
+    </script>
+</head>
+<body>
+
+    <div>
+        <div style="border: 1px solid gray; margin-left:40px";  top: 150px; left: 150px">
+        <h3>Check first number is greater then second?</h3>
+            Enter first number:<input type="text" style="left:20px" name="first"/></br>
+            Enter second number:<input name="second" type="text"/></br> 
+            <input type="button" value="submit" onclick="alert(FindGeaterNo(first.value,second.value))"/></br>
+              
+        
+        </div>
+    </div>
+    
+</body>
+</html>
