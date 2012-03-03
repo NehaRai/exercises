@@ -1,0 +1,27 @@
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+  <script type='text/javascript' src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
+  <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css" rel="stylesheet" type="text/css"/>
+
+<script type="text/javascript">
+   $().ready(function () {
+        $("#tags").autocomplete({
+            source: ["PD43-102M", "PD43-182M", "PD43-222M", "PD43-272M", "PD43-332M", "PD43-292M", "PD43-472M", "PD43-562M",
+            "PD43-123M", "PD43-103M"]
+           
+        });
+   });
+</script>
+</head>
+<body>
+<div >
+<div ><label>Tags (local):</label>
+			<input type="text" id='tags' />
+			<input type="button" value="Get Value" /></div>
+</div><!-- End demo -->
+
+</body>
+</html>

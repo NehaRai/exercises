@@ -1,0 +1,27 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#btnGetTweets").click(function () {
+            $.ajax({
+                type: 'GET',
+                dataType: 'jsonp',
+                url: 'http://twitter.com/status/user_timeline/jquery.json',
+                success: function (result) {
+                    for (var i = 0; i < result.length; i++) {
+                        $("#Tweetfeed").append("<li>" + result[i].text + "</li>");
+                    }
+                  }
+            });
+        });
+    });
+                 
+</script>
+</head>
+<body>
+<button id="btnGetTweets">get tweets</button>
+<ul id="Tweetfeed">
+</ul>
+</body>
+</html>
