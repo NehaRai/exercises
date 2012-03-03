@@ -1,0 +1,82 @@
+Example Html -
+  <html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+      <title>Document</title>
+      <script type="text/javascript" src="Scripts/jquery-1.7.1.js"></script>
+      <!-- Include JQuery Library -->
+      <script type="text/javascript">
+          $("document").ready(function () {
+              //set and change
+              $("#btnSelChange").click(function () {
+                  $('p:first').html('Select and change');
+              });
+              //get
+              $("#btnget").click(function () {
+                  alert($(this).html());
+              });
+              //Add attribute
+              $("#btnAddAttr").click(function () {
+                  $("a").attr("href", "#");
+              });
+              //Add class
+              $("#btnAddClass").toggle(function () {
+                  $("ul").addClass("background");
+              }, function () {
+                  $("ul").removeClass("background");
+              });
+              //Append
+              $("#btnAppend").click(function () {
+                  $("p:last").append("<p class='a'>This is appended p</p>");
+              });
+              //Prepend
+              $("#btnPrepend").click(function () {
+                  $("p:first").prepend("<p class='b'>This is Prepended p</p>");
+              });
+              //Wrap div
+              $("div").click(function () {
+                  var content = 'div class="div"';
+                  $("#wrap").wrap("<div></div>");
+              });
+              //Clone
+              $("label").click(function () {
+                  $(this).clone().insertAfter(this);
+              });
+              //          $.each($("#btnAddAttr").data("events"), function (i, e) { alert(i); });
+                            
+          });
+      </script>
+      <style type="text/css">
+        .a { color: Navy; }
+        .b { color: Maroon;} 
+        .background {background: yellow;} 
+       div{ margin:10px;padding:12px;
+             border:2px solid #666;
+             width:150px;
+           }
+ 
+      </style>
+  </head>
+  <body>
+      <ul id="list1">
+          <li  class="a">item 1</li>
+          <li class="a">item 2</li>
+          <li class="b">item 3</li>
+          <li class="b">item 4</li>
+      </ul>
+      <p class="a" id="Paragragh1">This is paragraph 1</p>
+      <p>This is paragraph 2</p>
+      <p class="b">This is paragraph 3</p>
+      <p >This is paragraph 4</p>
+       <p> <a >Add Attribute</a> </p>
+       <label style="border:2px solid red;">Click on me for clone</label>
+       <div id="wrap">Click on me for wrap</div>
+    
+       <button id="btnSelChange">Change first paragraph Text</button>
+       <button id="btnget">Return html of current button</button>
+       <button id="btnAddAttr">Add Attribute</button>
+       <button id="btnAddClass">Add class and Remove class from unordered list</button></br>
+       <button id="btnAppend">Append p after last p</button>
+       <button id="btnPrepend">Prepend p before first p</button>
+  </body>
+  
+  </html>
