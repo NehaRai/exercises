@@ -1,0 +1,20 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#txtinput').click(function () {
+            $(this).Captalize();
+        });
+        $.fn.Captalize = function () {
+            $("#txtinput").val($("#txtinput").val().toUpperCase());
+        }
+        
+    });               
+</script>
+</head>
+<body>
+    <h3>Click on textarea to capitalize all the words</h3>
+    <textarea cols="20" rows="8" id="txtinput" ></textarea>
+</body>
+</html>

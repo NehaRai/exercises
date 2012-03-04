@@ -1,0 +1,24 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#txtinput").keyup(function () { $.fn.Countchar(); });
+        $.fn.Countchar = function () {
+            var maxlength=120 ;
+            if ($("#txtinput").val().length > maxlength)
+                $("#txtinput").val($("#txtinput").val().substring(0, maxlength));
+            else
+                $("#countCharacter").html((maxlength - $("#txtinput").val().length) + " characters left");
+        }
+    });               
+</script>
+</head>
+<body>
+<textarea cols="20" rows="8" id="txtinput"></textarea>  
+
+<div class="charLeft" id="countCharacter">120 characters left</div>
+
+
+</body>
+</html>

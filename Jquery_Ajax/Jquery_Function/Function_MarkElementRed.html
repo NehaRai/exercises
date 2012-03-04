@@ -1,0 +1,30 @@
+<html>
+<head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('p').click(function () {
+            $(this).makeMeRed();
+        });
+        $.fn.makeMeRed = function () {
+            $("p").css("color", "red");
+        }
+    });               
+</script>
+</head>
+<body>
+<div class="charLeft" id="countCharacter">
+<h3>Click on any paragraph to chang the color</h3>
+    <p>Paragraph1
+    </p>
+    <p>Paragraph2
+    </p>
+    <p>Paragraph3
+    </p>
+    <p>Paragraph4
+    </p>
+</div>
+
+
+</body>
+</html>
